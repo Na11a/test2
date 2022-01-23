@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { media } from "..";
 type UlProps = {
-    open: boolean;
+    open?: boolean;
   };
   
 const Ul = styled.ul<UlProps>`
@@ -15,4 +15,5 @@ const Ul = styled.ul<UlProps>`
     display:${open ? "block" : "none"};
   `}
 `;
+
 export default Ul;
