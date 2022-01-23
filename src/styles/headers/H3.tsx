@@ -8,6 +8,7 @@ type Props = {
 const StyledH3 = styled.h3`
   font-size: ${(props) => props.theme.fontSizes.h3};
   font-weight: bold;
+  text-transform:capitalize;
 `;
 const H3 = ({ children }: Props) => {
   return <StyledH3>{children}</StyledH3>;
