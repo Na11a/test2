@@ -8,10 +8,8 @@ const GlobalStyle = createGlobalStyle`
     font-family:font-family: Ubuntu, "times new roman", times, roman, serif;
 }    
 body{    
-    ${media.greaterThan("sm")`
     width:80vw;
     padding-left:10vw;
-    `}
-    }
+}   
 `;
 export default GlobalStyle;
