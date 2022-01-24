@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import StyledSection from "../styles/components/Section";
 import { H3 } from "../styles/components";
+import { media } from "../styles";
 
 type Props = {};
 
@@ -12,13 +13,17 @@ const StyledLinks = styled.ul`
   padding-left:0px;
   & a{
     display:inline;
-    width:90%;
+    width:100%;
     border-bottom: 0.1px solid grey;
     margin-top:1vh;
     color:${(props) => props.theme.colors.blue};
     font-size: ${(props) => props.theme.fontSizes.small};
     text-transform:capitalize;
     text-decoration-line:none;
+    ${(props) => media.greaterThan('sm')`
+    border:none;
+    font-size:${props => props.theme.fontSizes.footerText};
+    `}
   }
   & a::before{
     content: "•";  
