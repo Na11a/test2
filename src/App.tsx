@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { ThemeProvider } from "styled-components";
-import { Footer, Header } from "./components";
+import { Footer, Header } from "./components/sections";
 import { GlobalStyles, theme } from "./styles";
 
 function App() {

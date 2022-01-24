@@ -7,12 +7,12 @@ const StyledForm = styled.form`
   display: flex;
 `;
 
-const Form = (props: Props) => {
+const SearchForm = (props: Props) => {
   return (
     <StyledForm>
       <Input></Input>
-      <Button>search</Button>
+      <Button>Search</Button>
     </StyledForm>
   );
 };
-export default Form;
+export default SearchForm;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { CompanyLogo, Form, NavBar } from "..";
+import { CompanyLogo, SearchForm, NavBar } from "..";
 
 type Props = {};
 const Section = styled.section`
@@ -16,7 +16,7 @@ const Search = (props: Props) => {
     <Section>
       <NavBar />
       <CompanyLogo  src="companyLogo.jpeg" alt="bluePrint" />
-      <Form></Form>
+      <SearchForm></SearchForm>
     </Section>
   );
 };

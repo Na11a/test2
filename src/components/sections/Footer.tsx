@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { About } from "./sections";
+import { About } from "..";
+import ContactUs from "../ConctactUs";
+import LatestBlogPosts from "../LatestBlogPosts";
+import QuickLinks from "../QuickLinks";
 
 type Props = {};
 const StyledFooter = styled.footer`
@@ -8,12 +11,16 @@ const StyledFooter = styled.footer`
   color: ${(props) => props.theme.colors.powderWhite};
   display: flex;
   flex-direction: column;
-  padding-left: 3vw;
+  padding-left: 5vw;
+
 `;
 const Footer = (props: Props) => {
   return (
     <StyledFooter>
       <About />
+      <QuickLinks />
+      <LatestBlogPosts />
+      <ContactUs />
     </StyledFooter>
   );
 };
