@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { media } from "..";
-import { pxToRem } from "../convector";
 interface ITextBlock {
   color?: string;
   backgroundColor?: string;
