@@ -17,7 +17,7 @@ interface IColors {
   white: string;
   aquaBlue: string;
   black: string;
-  grey: string;
+  lightGrey: string;
 }
 interface IFontSizes {
   small: string;
@@ -26,6 +26,9 @@ interface IFontSizes {
   h3:string;
   h3Desktop:string;
   footerText:string;
+  h2:string;
+  mainText:string;
+  buttonText:string;
 }
 interface IWidth {
   small: string;
@@ -44,7 +47,7 @@ const theme: ITheme = {
     persianGreen: "#06B49A",
     lightBlue: "#AFDBD2",
     onyx: "#36313D",
-    grey: "#E8E8E8",
+    lightGrey: "#d3d3d3",
     blue: "#00f",
     white: "#fff",
     aquaBlue: "#00FFFF",
@@ -57,6 +60,10 @@ const theme: ITheme = {
     h3:pxToRem(20.8),
     h3Desktop:pxToRem(15),
     footerText:pxToRem(13),
+    h2:pxToRem(48),
+    mainText:pxToRem(18),
+    buttonText:pxToRem(24),
+  
   },
   widths: {
     small: "6vw",

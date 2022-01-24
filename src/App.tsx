@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { ThemeProvider } from "styled-components";
-import { Footer, Header } from "./components/sections";
+import { Footer, Header, Main } from "./components/sections";
 import { GlobalStyles, theme } from "./styles";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
         <Fragment>
           <GlobalStyles />
           <Header />
+          <Main />
           <Footer/>
         </Fragment>
       </ThemeProvider>
