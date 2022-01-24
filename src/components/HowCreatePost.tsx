@@ -12,18 +12,24 @@ const StyledSection = styled.section`
   ${(props) => media.greaterThan("sm")`
     display:flex;
     flex-direction:row;
-    padding:8vh 10%;
+    padding:8vh 10vw;
     align-items: center;
+    flex-wrap:wrap;
+    justify-content:space-between;
     `}
 `;
 const StyledH2 = styled.h2`
   font-size: ${(props) => props.theme.fontSizes.h2};
   font-weight: 400;
 `;
-const StyledDescription = styled.div`
-  ${(props) => media.greaterThan("sm")`
-    width:40vw;
-    margin-right:10vw;
+interface IStyledBlock {
+  padding?: string;
+  width?: string;
+}
+const StyledBlock = styled.div<IStyledBlock>`
+  ${({ theme, padding, width }) => media.greaterThan("sm")`
+    width:${() => width || "400px"};
+    padding:${() => padding || "0 10vw 0 0"};
     `}
 `;
 const StyledText = styled.p`
@@ -47,7 +53,7 @@ const StyledButton = styled.button`
 export default function HowCreatePost({}: Props) {
   return (
     <StyledSection>
-      <StyledDescription>
+      <StyledBlock>
         <StyledH2>Your title can be long and descriptive</StyledH2>
         <StyledText>
           Maecenas ut lacus vel justo mollis pharetra. Donec vel mollis justo.
@@ -56,15 +62,16 @@ export default function HowCreatePost({}: Props) {
           euismod. Nulla a urna auctor, pharetra enim a, interdum lacus.
         </StyledText>
         <StyledButton>Read More</StyledButton>
-      </StyledDescription>
-
-      <ImageWrapper
-        src="postCreate.jpeg"
-        alt="Post create"
-        width="50%"
-        padding="5% 0 10% 0"
-        height="auto"
-      />
+      </StyledBlock>
+      <StyledBlock width="600px" padding="0">
+        <ImageWrapper
+          src="postCreate.jpeg"
+          alt="Post create"
+          width="auto"
+          padding="5% 0 10% 0"
+          height="100%"
+        />
+      </StyledBlock>
     </StyledSection>
   );
 }

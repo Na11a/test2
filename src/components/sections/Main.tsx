@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HowCreatePost } from "..";
+import { ContactInvitation, HowCreatePost, ScreenCards } from "..";
 
 type Props = {};
 const StyledMain = styled.main`
@@ -12,6 +12,8 @@ const Main = (props: Props) => {
   return (
     <StyledMain>
       <HowCreatePost />
+      <ScreenCards />
+      <ContactInvitation />
     </StyledMain>
   );
 };

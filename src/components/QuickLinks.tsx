@@ -27,7 +27,7 @@ const StyledLinks = styled.ul`
   }
   & a::before{
     content: "•";  
-    color: ${(props) => props.theme.colors.grey}; 
+    color: ${(props) => props.theme.colors.lightGrey}; 
     font-weight: bold; 
     display: inline-block; 
     width: 1em;  
