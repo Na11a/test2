@@ -22,10 +22,10 @@ const ImageContainer = styled.div<IImageContainer>`
 `;
 const Img = styled.img<ImagePropsCss>`
   margin: ${({ margin }) => margin && `${margin}`};
-  width: 100%;
-  height:100%;
+  max-width: 100%;
+  max-height:100%;
   padding: ${({ padding }) => padding && `${padding}`};
-  ${media.lessThan("sm")`
+  ${media.greaterThan("sm")`
 `}
 `;
 
