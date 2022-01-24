@@ -24,6 +24,8 @@ interface IFontSizes {
   medium: string;
   large: string;
   h3:string;
+  h3Desktop:string;
+  footerText:string;
 }
 interface IWidth {
   small: string;
@@ -52,7 +54,9 @@ const theme: ITheme = {
     small: pxToRem(14),
     medium: pxToRem(20),
     large: pxToRem(32),
-    h3:pxToRem(20.8)
+    h3:pxToRem(20.8),
+    h3Desktop:pxToRem(15),
+    footerText:pxToRem(13),
   },
   widths: {
     small: "6vw",
