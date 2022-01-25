@@ -25,7 +25,7 @@ const StyledInput = styled.input`
   }
 `
 const StyledButton = styled.button`
- width:20%;
+ width:5rem;
  margin-top:20px;
  background-color:${(props) => props.theme.colors.blue};
  color:${(props) => props.theme.colors.white};
@@ -36,6 +36,7 @@ const StyledButton = styled.button`
  outline:none;
  height:${(props) => props.theme.heights.middle};
  border-radius:5px;
+ 
 `
 
 const ContactUs = (props: Props) => {
