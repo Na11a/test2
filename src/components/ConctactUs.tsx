@@ -20,6 +20,9 @@ const StyledInput = styled.input`
     text-transform:capitalize;
     color:white;
   }
+  &:hover{
+    cursor:pointer;
+  }
 `
 const StyledButton = styled.button`
  width:20%;

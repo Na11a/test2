@@ -14,10 +14,9 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   padding: 0 5%;
   ${media.greaterThan("sm")`
-  width:80vw;
-  padding:0 10vw 0 10vw;
+  padding:30px 10vw;
   flex-direction: row;
-  justify-content:space-around;
+  justify-content:space-between;
   flex-wrap:wrap;
   `}
 `;
