@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { media } from "../styles";
 import { COMPANY_LOGO } from "./CompanyLogo";
@@ -11,7 +12,7 @@ interface LiProps {
 
 const pages = [
   "homepage",
-  "our team",
+  "posts",
   "top sites",
   "programs",
   "contact us",
@@ -139,6 +140,7 @@ const StyledLi = styled.li<LiProps>`
   font-size: ${(props) => props.theme.fontSizes.small};
   text-transform: ${({ textTransform }) => textTransform || "normal"};
   color: ${(props) => props.theme.colors.white};
+
   ${(props) => media.greaterThan("sm")`
   margin:0px;
   padding:10px 30px;
@@ -156,9 +158,15 @@ const NavBar = (props: Props) => {
       <StyledUl isOpen={hamburgerOpen} className="nav-menu">
         {pages.map((title, id) => {
           return (
-            <StyledLi textTransform="uppercase" key={id}>
-              {title}
-            </StyledLi>
+            <Link
+              to={title === "homepage" ? "/" : title}
+              key={id}
+              style={{ textDecoration: "none" }}
+            >
+              <StyledLi textTransform="uppercase">
+                {title}
+              </StyledLi>
+            </Link>
           );
         })}
       </StyledUl>

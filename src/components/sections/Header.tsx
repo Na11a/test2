@@ -6,11 +6,9 @@ import { media } from "../../styles";
 
 type Props = {};
 const StyledHeader = styled.header`
-  width:90%;
-  padding: 0 5% 5% 5%;
+  width:100%;
   ${media.greaterThan("sm")`
-  width:80%;
-  padding: 0 10%;
+  width:100%;
   `}
 `;
 const Header = (props: Props) => {
