@@ -1,6 +1,7 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { ContactInvitation, HowCreatePost, ScreenCards } from "..";
+import { HomePage, PostsPage } from "../../pages";
 
 type Props = {};
 const StyledMain = styled.main`
@@ -11,9 +12,10 @@ const StyledMain = styled.main`
 const Main = (props: Props) => {
   return (
     <StyledMain>
-      <HowCreatePost />
-      <ScreenCards />
-      <ContactInvitation />
+      <Routes>
+        <Route path="/posts" element={<PostsPage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
+      </Routes>
     </StyledMain>
   );
 };
