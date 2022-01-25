@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { About } from "..";
+import { About } from "../Footer";
 import { media } from "../../styles";
-import ContactUs from "../ConctactUs";
-import LatestBlogPosts from "../LatestBlogPosts";
-import QuickLinks from "../QuickLinks";
+import {ContactUs} from "../Footer";
+import {LatestBlogPosts} from "../Footer";
+import {QuickLinks} from "../Footer";
 
 type Props = {};
 const StyledFooter = styled.footer`

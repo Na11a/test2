@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import StyledSection from "../styles/components/Section";
-import { H3 } from "../styles/components";
-import { media } from "../styles";
+import StyledSection from "../../styles/components/Section";
+import { H3 } from "../../styles/components";
+import { media } from "../../styles";
 
 type Props = {};
 
@@ -22,7 +22,7 @@ const StyledLinks = styled.ul`
     text-decoration-line:none;
     ${(props) => media.greaterThan('sm')`
     border:none;
-    font-size:${props => props.theme.fontSizes.footerText};
+    font-size:${props.theme.fontSizes.footerText};
     `}
   }
   & a::before{

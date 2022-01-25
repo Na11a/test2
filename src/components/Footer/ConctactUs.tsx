@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { H3 } from "../styles/components";
-import StyledSection from "../styles/components/Section";
+import { H3 } from "../../styles/components";
+import StyledSection from "../../styles/components/Section";
 
 type Props = {};
 const StyledForm = styled.form`
