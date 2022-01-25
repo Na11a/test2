@@ -9,6 +9,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   width: 18vw;
+  min-width:150px;
   height: ${(props) => props.theme.heights.middle};
   background-color: ${(props) => props.theme.colors.lightGrey};
   justify-content: space-between;
