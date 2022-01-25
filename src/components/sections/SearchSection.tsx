@@ -15,7 +15,7 @@ const Search = (props: Props) => {
   return (
     <Section>
       <NavBar />
-      <CompanyLogo  src="companyLogo.jpeg" alt="bluePrint" />
+      <CompanyLogo  src="companyLogo.jpeg" alt="bluePrint" height="auto"/>
       <SearchForm></SearchForm>
     </Section>
   );

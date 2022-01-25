@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
   width: 18vw;
   height: ${(props) => props.theme.heights.middle};
-  background-color: ${(props) => props.theme.colors.grey};
+  background-color: ${(props) => props.theme.colors.lightGrey};
   justify-content: space-between;
   padding: 5px;
   border: 1px solid;
@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const TextInput = styled.input`
   flex: 1 0;
-  min-width: 50px;
+  min-width: 150px;
   min-height: 25px;
   font-size: inherit;
   background-color: transparent;

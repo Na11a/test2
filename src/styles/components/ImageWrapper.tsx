@@ -22,22 +22,22 @@ const ImageContainer = styled.div<IImageContainer>`
 `;
 const Img = styled.img<ImagePropsCss>`
   margin: ${({ margin }) => margin && `${margin}`};
-  width: 100%;
-  height:100%;
+  max-width: 100%;
+  max-height:100%;
   padding: ${({ padding }) => padding && `${padding}`};
-  ${media.lessThan("sm")`
+  ${media.greaterThan("sm")`
 `}
 `;
 
 const defaultWidth = "13vw";
 const defaultHeight = "12vh";
-const ImageWrapper = ({ src, alt, width, height }: ImageProps) => {
+const ImageWrapper = ({ src, alt, width, height,padding }: ImageProps) => {
   return (
     <ImageContainer
       width={width ? width : defaultWidth}
       height={height ? height : defaultHeight}
     >
-      <Img src={src} alt={alt}></Img>
+      <Img src={src} alt={alt} padding={padding}></Img>
     </ImageContainer>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { H3 } from "../styles/components";
 import StyledSection from "../styles/components/Section";
 
 type Props = {};
@@ -10,7 +11,6 @@ const StyledForm = styled.form`
 const StyledInput = styled.input`
   margin-top:1vh;
   background-color:grey;
-  width:90%;
   border-radius:3px;
   border:none;
   outline:none;
@@ -38,6 +38,7 @@ const StyledButton = styled.button`
 const ContactUs = (props: Props) => {
   return (
     <StyledSection>
+      <H3>contact us</H3>
     <StyledForm name="contact-us">
       <StyledInput placeholder="name" name="name" type='text'></StyledInput>
       <StyledInput placeholder="email" name="email" type='text'></StyledInput>
