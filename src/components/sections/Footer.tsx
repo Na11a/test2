@@ -10,6 +10,7 @@ type Props = {};
 const StyledFooter = styled.footer`
   background-color: ${(props) => props.theme.colors.black};
   color: ${(props) => props.theme.colors.powderWhite};
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   padding: 0 5%;

@@ -36,13 +36,14 @@ const Nav = styled.nav<IOpen>`
     &:before{
       content:url(${COMPANY_LOGO});
       position:absolute;
-      left:25%;
+      left:25vw;
       top:25px;
       z-index:4;
 
     }`}
 
   ${media.greaterThan("sm")`
+  position:relative;
   width: 100%;
   padding-bottom: 2vh;
 `}
@@ -159,13 +160,12 @@ const NavBar = (props: Props) => {
         {pages.map((title, id) => {
           return (
             <Link
+              onClick={() => setHamburgerOpen(false)}
               to={title === "homepage" ? "/" : title}
               key={id}
               style={{ textDecoration: "none" }}
             >
-              <StyledLi textTransform="uppercase">
-                {title}
-              </StyledLi>
+              <StyledLi textTransform="uppercase">{title}</StyledLi>
             </Link>
           );
         })}
