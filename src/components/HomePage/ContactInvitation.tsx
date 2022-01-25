@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { media } from "../styles";
-import { pxToRem } from "../styles/convector";
+import { media } from "../../styles";
+import { pxToRem } from "../../styles/convector";
 
 type Props = {};
 const StyledSection = styled.section`

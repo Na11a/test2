@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { media } from "../styles";
-import { ImageWrapper } from "../styles/components";
-import { pxToRem } from "../styles/convector";
+import { media } from "../../styles";
+import { ImageWrapper } from "../../styles/components";
+import { pxToRem } from "../../styles/convector";
 
-type Props = {};
-const StyledSection = styled.section`
+type StyledProps = {
+  onlyText?: boolean;
+};
+const StyledSection = styled.section<StyledProps>`
   padding: 0 5%;
   background-color: ${(props) => props.theme.colors.lightGrey};
   border-bottom: 10px solid ${(props) => props.theme.colors.onyx};
@@ -17,6 +19,34 @@ const StyledSection = styled.section`
     flex-wrap:wrap;
     justify-content:space-between;
     `}
+  ${(props) =>
+    props.onlyText &&
+    // only text mode (use at PostPage)
+    `
+  background-color:white;
+  display:block;
+  padding:5%;
+  border:none;
+  margin:0;
+  & img{
+    display:none;
+  }
+  & button{
+    display:none;
+  }
+  & h2{
+    font-weight:bold;
+    font-size:${props.theme.fontSizes.large};
+  }
+  `}
+  ${props => props.onlyText && media.greaterThan('sm')`
+    display:block;
+    width:80%;
+    text-align:left;
+    & div{
+      width:100%
+    }
+  `}
 `;
 const StyledH2 = styled.h2`
   font-size: ${(props) => props.theme.fontSizes.h2};
@@ -51,9 +81,10 @@ const StyledButton = styled.button`
     font-size: ${pxToRem(18)};
   }
 `;
-export default function HowCreatePost({}: Props) {
+const HowCreatePost = ({ onlyText }: StyledProps) => {
+ 
   return (
-    <StyledSection>
+    <StyledSection onlyText={onlyText}>
       <StyledBlock>
         <StyledH2>Your title can be long and descriptive</StyledH2>
         <StyledText>
@@ -75,4 +106,5 @@ export default function HowCreatePost({}: Props) {
       </StyledBlock>
     </StyledSection>
   );
-}
+};
+export default HowCreatePost;
