@@ -18,6 +18,7 @@ interface IColors {
   aquaBlue: string;
   black: string;
   lightGrey: string;
+  footerH:string;
 }
 interface IFontSizes {
   small: string;
@@ -52,6 +53,7 @@ const theme: ITheme = {
     white: "#fff",
     aquaBlue: "#00FFFF",
     black: "#000",
+    footerH:"#47424F"
   },
   fontSizes: {
     small: pxToRem(14),
