@@ -5,9 +5,9 @@ import { ImageProps } from "../styles/components/ImageWrapper";
 interface ICompanyLogo extends ImageProps {
   height?:string
 };
-
+export const COMPANY_LOGO = 'companyLogo.jpeg'
 const CompanyLogo = ({
-  src = "companyLogo.jpeg",
+  src = COMPANY_LOGO,
   alt = "bluePrint",
   width,
   height

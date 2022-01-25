@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const TextInput = styled.input`
   flex: 1 0;
-  min-width: 50px;
+  min-width: 150px;
   min-height: 25px;
   font-size: inherit;
   background-color: transparent;

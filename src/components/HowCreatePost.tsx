@@ -28,6 +28,7 @@ interface IStyledBlock {
 }
 const StyledBlock = styled.div<IStyledBlock>`
   ${({ theme, padding, width }) => media.greaterThan("sm")`
+    flex:1 1 200px;
     width:${() => width || "400px"};
     padding:${() => padding || "0 10vw 0 0"};
     `}
@@ -69,7 +70,7 @@ export default function HowCreatePost({}: Props) {
           alt="Post create"
           width="auto"
           padding="5% 0 10% 0"
-          height="100%"
+          height="auto"
         />
       </StyledBlock>
     </StyledSection>
