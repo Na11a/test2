@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { ScreenCard } from ".";
-import { media } from "../styles";
-import { ImageWrapper } from "../styles/components";
+import { media } from "../../styles";
+import { ImageWrapper } from "../../styles/components";
 
 type Props = {};
 export interface ITablet {
@@ -42,44 +42,47 @@ const StyledSection = styled.section`
   ${(props) => media.greaterThan("sm")`
     display:flex;
     padding:5% 10%;
+    width:80%;
     flex-direction:row;
+    text-align:center;
     flex-wrap:wrap;
     align-items:top;
     justify-content:space-between;
 
   `}
 `;
-const StyledBlock = styled.div`
+interface IStyledBlock{
+  width?:string;
+}
+const StyledBlock = styled.div<IStyledBlock>`
   ${(props) => media.greaterThan("sm")`
-    width: 50%;
+    width: ${props.width || '300px'};
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:space-between;
-
+    flex-grow:1;
     `}
 `;
 const ScreenCards = (props: Props) => {
   return (
     <StyledSection>
-      <StyledBlock>
+      <StyledBlock width="500px">
         <ImageWrapper
           src="screens.jpg"
           alt="screens"
-          width="100%"
+          width="auto"
           height="auto"
         ></ImageWrapper>
       </StyledBlock>
       <StyledBlock>
         {data &&
-          data.map((tablet: ITablet) => (
-            <ScreenCard tablet={tablet}></ScreenCard>
+          data.map((tablet: ITablet,index) => (
+            <ScreenCard key={index} tablet={tablet}></ScreenCard>
           ))}
       </StyledBlock>
     </StyledSection>
   );
 };
 export default ScreenCards;
-function tablet(tablet: any): React.ReactNode {
-  throw new Error("Function not implemented.");
-}
+
