@@ -1,5 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { useTypeSelector } from "../hooks/UseTypeSelector";
+import { FilterActions, IAction } from "../store/actions/filterActions";
 import { Button, Input } from "../styles/components";
 
 type Props = {};
@@ -24,10 +27,17 @@ const SearchForm = (props: Props) => {
     const { value } = e.target;
     setValue(value);
   };
+  const dispatch = useDispatch();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(value);
-    setValue('')
+    const ActionObject: IAction = {
+      type: FilterActions.FETCH_FILTER,
+      payload: value,
+    };
+    dispatch(ActionObject);
+    setValue("");
   };
   return (
     <StyledForm onSubmit={handleSubmit}>
