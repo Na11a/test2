@@ -1,9 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { useTypeSelector } from "../hooks/UseTypeSelector";
 import { FilterActions, IAction } from "../store/actions/filterActions";
-import { Button, Input } from "../styles/components";
+import { Input } from "../styles/components";
 
 type Props = {};
 const StyledForm = styled.form`
