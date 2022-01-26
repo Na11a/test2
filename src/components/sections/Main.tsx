@@ -7,6 +7,7 @@ type Props = {};
 const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
+  min-height:60vh;
 `;
 
 const Main = (props: Props) => {

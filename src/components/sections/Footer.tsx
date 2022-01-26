@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { About } from "..";
+import { About } from "../Footer";
 import { media } from "../../styles";
-import ContactUs from "../ConctactUs";
-import LatestBlogPosts from "../LatestBlogPosts";
-import QuickLinks from "../QuickLinks";
+import {ContactUs} from "../Footer";
+import {LatestBlogPosts} from "../Footer";
+import {QuickLinks} from "../Footer";
 
 type Props = {};
 const StyledFooter = styled.footer`
   background-color: ${(props) => props.theme.colors.black};
   color: ${(props) => props.theme.colors.powderWhite};
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   padding: 0 5%;
