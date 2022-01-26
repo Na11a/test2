@@ -2,7 +2,7 @@
 Get posts from public/db.json
 
 
-search input write search value at FiletState(redux)
+search input write search value at FiltetState(redux)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
