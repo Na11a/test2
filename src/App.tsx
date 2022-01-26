@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import  { ThemeProvider } from "styled-components";
 import { Footer, Header, Main } from "./components/sections";
