@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   width: 18vw;
-  min-width:150px;
+  min-width: 150px;
   height: ${(props) => props.theme.heights.middle};
   background-color: ${(props) => props.theme.colors.lightGrey};
   justify-content: space-between;
@@ -37,18 +37,19 @@ const TextInput = styled.input`
     color: ${(props) => props.theme.colors.black};
   }
 `;
+interface IUserInput {
+  value: string;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+}
 
-const Input = () => {
-  const [inputValue, setInputValue] = useState("");
-
+const Input = ({ value, handleChange, placeholder }: IUserInput) => {
   return (
     <Container>
       <TextInput
-        placeholder="Search Our Website..."
-        value={inputValue}
-        onChange={(event) => {
-          setInputValue(event.target.value);
-        }}
+        placeholder={placeholder}
+        value={value}
+        onChange={handleChange}
       />
     </Container>
   );
